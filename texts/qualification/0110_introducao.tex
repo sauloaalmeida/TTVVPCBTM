@@ -1,0 +1,61 @@
+
+\chapter{INTRODUÇÃO}
+
+A programação concorrente não é mais utilizada apenas para resolver problemas relacionados com a computação de alta performance. Os microprocessadores que permitem executar programas concorrentes estão disponíveis em quase todos os dispositivos. Essa nova realidade foi vislumbrada em \cite{2005Sutter}, e apresentada como a Revolução do Software Concorrente.
+
+Um programa é dito concorrente quando é construído com o propósito de resolver um ou mais problemas, utilizando mais de uma linha de execução simultânea. 
+
+Atualmente a programação concorrente é utilizada para resolver problemas corriqueiros do desenvolvimento de softwares, como por exemplo: Desacoplar interface de uma aplicação das operações mais demoradas, como as de IO ou de processamentos do back-end; Possibilitar que programas que são executados em um único nó, possa utilizar recursos de arquiteturas multi-core; Na implementação do paradigma de comunicação utilizado pela programação Web, tanto no lado do cliente quanto no lado servidor; Para auxiliar aplicações mobiles nas suas interações com serviços e dados remotos; Em soluções que se apoiam no paradigma  \textit{peer-to-peer}, seja na implementação de serviços ou na coordenação do processamento em múltiplos nós. 
+
+Apesar da programação concorrente ser objeto de estudo desde a década de sessenta \cite{1965Dijkstra}, é possível perceber que nos últimos anos a sua utilização tem sido cada vez mais incentivada, e isso pode ser notado ao avaliar a evolução das novas arquiteturas de hardware com o enfoque na disponibilização de recursos de concorrência ou com a evolução e criação de novas de linguagens de programação com o proposito de viabilizar ou facilitar a utilização desse tipo de programação.
+
+\section{Motivação}
+
+Para garantir o funcionamento correto de um programa que utiliza múltiplos fluxos de processamento, muitas vezes é necessário realizar algum tipo de comunicação ou sincronização das tarefas entre esses fluxos de processamento. Essa necessidade cria novos desafios de designs e de verificação da confiabilidade do programa.
+
+Durante a criação de um programa, apenas a mudança do paradigma de programação sequencial para o de programação concorrente, já cria uma complexidade na forma de pensar o algoritmo, o que normalmente impacta na confiabilidade de um programa.
+
+ Essa confiabilidade também é afetada pelo comportamento não determinístico na ordem de execução dos seus fluxos de processamento. O gerenciamento da ordem dos fluxos de execução de um programa concorrente é de responsabilidade exclusiva do Sistema Operacional e durante a criação do programa, o desenvolvedor não tem como interferir na definição dessa ordem. 
+
+Nesse contexto, durante a execução de um programa concorrente, onde a execução dos fluxos de processamento acontecem de forma imprevisível, poderão surgir erros inesperados e que podem ocorrer de forma intermitente. Esse processo não determinístico dificulta o processo de identificação e reprodução desse tipo de erro. 
+
+Algumas soluções têm sido propostas com o objetivo de aumentar a confiabilidade dos programas concorrentes, como por exemplo: A criação de linguagens de programação que tentam diminuir a complexidade da utilização desse tipo de programação; E a criação de novas técnicas e ferramentas de validação e verificação, que visam auxiliar o processo de identificação desses tipos de problemas. O interesse por ambas soluções tem  crescido tanto na comunidade acadêmica quanto na indústria de desenvolvimento de software.
+
+\section{Caracterização do problema}
+
+Em um programa concorrente, a necessidade de comunicação ou sincronização do trabalho entre os diversos fluxos de execução aumenta consideravelmente a complexidade desse programa. As duas principais abordagens para realizar esse tipo de comunicação são: A utilização de uma área de memória compartilhada para suportar a comunicação entre os fluxos concorrentes de trabalho que estão sendo executados em uma única máquina; Uma segunda abordagem, que pode ser utilizada em um único nó ou de forma distribuída, é que a comunicação entre esses fluxos aconteça através de troca de mensagens.
+
+Tipicamente, a abordagem de comunicação entre fluxos mais utilizada é a de utilização de uma área compartilhada de memória. Essa abordagem é um pouco mais próxima do paradigma de programação sequencial e seria em teoria um pouco simples para quem começa a trabalhar com a programação concorrente. Entretanto existem alguns pontos comuns onde podem acontecer falhas nessa abordagem, como por exemplo quando o programador não garante um acesso exclusivo durante alterações nessa área de memória compartilhada.
+
+ Os programas que se baseiam na abordagem de comunicação entre os fluxos através da troca de mensagem, tentaram inicialmente resolver o problema de comunicação e sincronização do trabalho para processos que são executados em máquinas diferentes. Entretanto nos últimos anos, algumas linguagens de programação como por exemplo as linguagens Erlang, Go e Rust, mesmo trabalhando com múltiplos fluxos dentro de um único nó, passaram a disponibilizar recursos que permitem que a comunicação entre esses múltiplos fluxos ocorra através da troca de mensagens, tentando evitar os problemas de concorrência que tipicamente ocorrem dentro das áreas de memórias compartilhadas.
+
+ Ferramentas de testes e de verificação e validação de software tem se mostrado mecanismos eficientes para apoiar o desenvolvimento de aplicações. Muitos estudos, ferramentas e técnicas foram criadas para apoiar a validação de programas tradicionais \cite{myers_art_2012}, \cite{DAVIDCOWARD1988189}, \cite{umar2019study}.
+
+ Tanto devido a complexidade inerente a programação concorrente, quanto ao aumento da utilização da programação concorrente no dia a dia do desenvolvimento de software tem demandado a criação de técnicas, ferramentas, que apoiem os processos de teste, validação e verificação de programas concorrentes. 
+ 
+ A maioria das técnicas e ferramentas de verificação e validação existentes são voltadas para programas que realizam a comunicação entre os fluxos através de compartilhamento de memória.
+
+ As técnicas utilizadas bem como as ferramentas de verificação e validação voltadas para programação concorrente com troca de mensagens são menores que as utilizadas com o paradigma de comunicação utilizando em memória compartilhada.
+
+ \section{Proposta do trabalho}
+
+Esse trabalho tem o objetivo em atuar no segundo tipo de solução, relacionadas com as técnicas, e ferramentas de validação e verificação.  
+
+Ainda dentro desse conjunto, o trabalho tenta focar em As técnicas mais comuns de são as de memoria compartilhada, e as ferramentas são mais para memoria compartilhada.
+
+gera demandas para estabelecer técnicas de verificação para esse tipo de problema
+
+O que o trabalho vai fazer, que é um levantamento do que existe hoje, tanto em termos de técnicas quanto ferramentas e a identificação de assuntos pouco ou não explorados.
+
+
+Dentro da estrutura arquitetural dos computadores vigentes, o sistema operacional é o responsável pelo gerenciamento das múltiplas linhas de execução de um  programa, e o desenvolvedor não possui mecanismos para interferir nesse processo de execução. 
+
+Essa característica de imprevisibilidade da ordem de execução pode criar uma situação errática de execução, e que pode acontecer de forma aleatória. Um erro com essa tipo de característica seria de difícil detecção ou recriação, o que prejudicaria o seu processo de correção.
+
+Mesmo com a criação de novas linguagens de programação e de novas ferramentas que auxiliam a detecção dos problemas relacionados à programação concorrente, a característica da imprevisibilidade de execução ainda torna o desenvolvimento de programas concorrentes uma atividade complexa.
+
+Apesar de existirem esforços na tentativa de converter de  forma automática, programas escritos sob o paradigma sequencial em programas concorrentes, devido a complexidade inerente a esse tipo de programação, os esforços ainda não avançaram de forma significativa, e tipicamente esse o processo de manutenção e ajustes nesse tipo de situação, normalmente precisa ser realizado por um programador.
+
+
+\section{Estrutura dessa proposta}
+	o restante deste texto está organizado da seguinte forma. O Capítulo~\ref{cap:proposta_pesquisa} descreve o sistema em questão, seguido pela caracterização de usuários reais na Capítulo~\ref{cap:referencial_teorico}, e o modelo na Capítulo~\ref{cap:metodologia} com algumas fórmulas fechadas. Apresentamos simulações na Capítulo~\ref{cap:resultados_parciais}.   Finalmente, trabalhos relacionados e conclusão vêm nos Capítulos~\ref{cap:plano_cronograma}.

@@ -1,0 +1,315 @@
+
+% ---
+% Modelo Epidemiológico
+% ---
+\chapter{METODOLOGIA}
+\label{cap:metodologia}
+% ---
+   A metodologia que será utilizada nesse trabalho será a Revisão Sistemática de Literatura. 
+   
+   A ideia por trás da escolha de desse metodologia, é tornar todo o processo da pesquisa mais metódico,  repetível e tentando também reduzir a possibilidade de enviesamento do estudo.  
+	
+\section{Revisão Sistemática de Literatura}
+
+O trabalho de \cite{keele_guidelines_2007} apresenta alguns pontos interessantes sobre a metodologia da Revisão Sistemática de literatura. Dentre eles os seguintes pontos chamam mais atenção:
+
+\begin{enumerate}
+    \item A revisão sistemática reúne de forma rigorosa a literatura de todas as pesquisas relacionadas a um problema específico, fornecendo conhecimento sobre esse problema;
+    \item A metodologia bem definida diminui a possibilidade de enviesamento (apesar de não eliminar um possível enviesamento do estudo selecionado);
+    \item Pode prover informações sobre um fenômeno, e a depender do resultado criar evidências se é consistente ou se as variações precisam ser melhor estudadas;  
+    \item Avalia criticamente as pesquisas;
+    \item Identificar em áreas de pesquisa com intuito de sugerir futuras investigações;
+    \item Para prover um framework que pode de maneira apropriada posicionar novas atividades de pesquisa;
+    \item Tem origem nos estudos voltados para a área de saúde;
+    \item Tem sido utilizada em algumas áreas de Sistema de Informação, principalmente na Engenharia de Software.
+    \item Requer muito mais esforço que uma revisão tradicional.
+\end{enumerate}
+
+Segundo \cite{Cordeiro-2007}, as primeiras técnicas formais da combinação dos resultados de diferentes estudos foram elaboradas e publicadas no British Medical Journal, pelo matemático britânico Karl Pearson, em 1904. Em 1955, aparece a primeira revisão sistemática sobre um cenário clínico, publicada no Journal of American Medical Association.
+
+Também na década de 90, apareceram as duas primeiras teses que consistiam em revisões sistemáticas com metanálises: uma na Inglaterra e outra no Brasil.
+
+Em 1995, um grupo de cientistas reunidos em Potsdam (Alemanha) definiu como revisão sistemática “a aplicação das estratégias científicas que limitam o viés de seleção e avaliam com espírito científico os artigos e sintetizam todos os estudos relevantes em tópicos específicos.
+
+De acordo com \cite{Dyba2005}, outras áreas do conhecimento humano passaram a utilizar metodologias chamadas de Baseadas em evidências, como a Enfermagem, Cuidados primários, Química Orgânica, Psicologia Empírica e Educação. A engenharia de software demonstrou ter similaridade com as áreas de ciências sociais. Com isso alguns estudos tem sido realizados utilizando a metodologia.
+
+\section{Plano da Revisão Sistemática} \label{sec:planoRevisao}
+
+ Uma das etapas iniciais de um trabalho que utiliza a metodologia de revisão sistemática de literatura é a criação de um plano de revisão de literatura. Esse plano é tipicamente criado  antes da execução da revisão. O plano contém as definições de etapas, formato e regras que serão utilizadas no trabalho. O plano de revisão utilizado nesse trabalho é detalhado nessa seção e também se baseou no exemplo do trabalho \cite{kitchenham2007guidelines}, que é um guia sobre como aplicar a metodologia em trabalhos relacionados com o assunto Engenharia de Software. Outras ideias foram adicionadas com base no trabalho desenvolvido em \cite{de2023gestao}.
+
+\subsection{Background}
+Apesar das citações de trabalhos de sistemas da informação que se apoiaram na metodologia de revisão sistemática de literatura apresentar um crescimento durante o passar dos anos, a quantidade de trabalhos retornados durante buscas por revisões sistemáticas de literatura nessa área ainda é pouco expressivo, como demonstrado em \cite{kitchenham_systematic_2009}.
+
+Apesar de existir perceber um esforço na realização de trabalhos nesse formato em algumas áreas da informática, como Sistema da Informação e Engenharia de Software, muitas áreas ainda não tem essa prática.
+
+Ao tentar levantar revisões sistemáticas voltadas para as áreas de validação, verificação, técnicas e testes automatizados de programação concorrente, como apresentado no capítulo  \ref{cap:trabalhos_relacionados}, foram encontrados apenas três trabalhos e todos com mais de dez anos de publicação. Ao tentar restringir mais o escopo da busca, para o tema de interesse desse trabalho, tentando focar nos assuntos de validação, verificação, técnicas e testes automatizados de programação concorrente baseados em troca de mensagem, nenhum resultado foi encontrado e esse é mais uma das motivações para a utilização dessa metodologia.
+
+\subsection{Perguntas de Pesquisa} \label{subsec:pergutasPesquisa}
+
+As perguntas que devem pretendem ser respondidas ao final dessa revisão sistemática de literatura são apresentadas a seguir:
+
+\begin{enumerate}
+    \item Quais problemas de concorrência aparecem em programas concorrentes baseados em trocas de mensagens?
+    \item Quais técnicas têm sido desenvolvidas para identificar esses problemas?
+    \item Como programas concorrentes baseados em troca de mensagem são verificados e validados?
+    \item Dos problemas de concorrência que tipicamente ocorrem em programas baseados em memória compartilhada, como: corrida de dados; violação de ordem; violação de atomicidade e deadlocks, quais também ocorrem no contexto da troca de mensagens?
+    \item Qual os lacunas existentes nessa área de conhecimento, atualmente
+\end{enumerate}
+
+\subsection{Fluxo de trabalho} \label{subsec:fluxoTrabalho}
+
+O processo será feito seguindo um fluxo tradicional de um trabalho de SLR com as seguintes fases:
+
+\begin{enumerate}
+    \item Planejamento
+    \begin{enumerate}
+        \item Desenvolver Protocolo da Revisão de Literatura
+            \begin{enumerate}
+                \item Objetivo da pesquisa
+                \item Questões de pesquisa
+                \item Palavras chaves e string de busca
+                \item Bases que serão pesquisadas
+                \item Critérios de inclusão e exclusão
+                \item Formulário de qualidade
+                \item Formulário de extração de dados
+            \end{enumerate}
+        \item Avaliar/Revisar Protocolo da Revisão de Literatura
+    \end{enumerate}
+    \item Execução
+    \begin{enumerate}
+        \item Identificar SLRs e Surveys relevantes
+        \item Identificar estudos primários relevantes 
+        \item Selecionar estudos primários
+        \item Verificar qualidade dos estudos (se atende aos critérios de qualidade estabelecidos no plano)
+        \item Realizar extração de dados com formulário pré definido no plano
+        \item Sintetizar dados levantados
+        \item Avaliar/Revisar dados sintetizados
+    \end{enumerate}
+    \item Reportar 
+    \begin{enumerate}
+        \item Escrever relatório / artigo da revisão
+        \item Validar relatório de revisão
+    \end{enumerate}
+\end{enumerate}
+
+Uma diferença substancial sobre o fluxo proposto, é que a ideia planejada para esse trabalho é a de realizar todas as etapas de forma iterativa. Cada iteração deverá pesquisa sobre uma das bases de dados escolhidas (começando da mais importante para as menos importantes). Espera-se que com essa abordagem, seja possível melhorar o processo, fazer ajustes e possibilite que a produção do texto do trabalho possa ser realizada de forma incremental.
+
+\subsection{String de busca}
+
+A string de busca que será utilizada no trabalho obedecerá a seguinte estrutura:
+
+
+\begin{verbatim}
+(
+    ("title + abstract":"message passing")  
+    AND(
+              "title + abstract":parallel*
+              OR "title + abstract":distribut*
+              OR "title + abstract":multi-thread*
+              OR "title + abstract":concurrent* ) 
+    AND (
+              "title + abstract":test* 
+              OR "title + abstract":check*
+              OR "title + abstract":validat* 
+              OR "title + abstract":verif*
+              OR "title + abstract":correct*
+              OR "title + abstract":techni*
+             )
+)    
+\end{verbatim}
+
+\subsection{Databases que serão pesquisados}  \label{subsec:repositoriosPesquisa}
+
+O Processo de busca será feito utilizando palavras chaves nas bases de dados listadas na tabela que segue:
+
+\begin{center}
+\begin{tabular}{ |p{4cm}|p{7cm}|  }
+\hline
+\textbf{Origem} & \textbf{Responsável pela execução} \\
+\hline
+IEEE & Saulo Andrade Almeida \\ 
+\hline
+ACM & Saulo Andrade Almeida \\ 
+\hline
+Science Direct & Saulo Andrade Almeida \\ 
+\hline
+Springer Link & Saulo Andrade Almeida \\ 
+\hline
+SCOPUS & Saulo Andrade Almeida \\ 
+\hline
+Citeseer library & Saulo Andrade Almeida \\ 
+\hline
+SciElo & Saulo Andrade Almeida \\ 
+\hline
+arXiv & Saulo Andrade Almeida \\ 
+\hline
+\end{tabular}
+\end{center}
+
+
+\subsection{Critérios de Inclusão}
+
+Os critérios de inclusão definidos para a escolha de trabalhos serão:
+
+\begin{enumerate}[label=CI\arabic*:]
+    \item Systematic Literature Reviews (SLRs) sobre: Validação; Verificação, Técnicas e Testes automatizados de programação concorrente baseados em troca de mensagem.
+    \item Literature surveys sobre os mesmo assuntos listados no primeiro item.
+    \item Ter relação com algum dos sobre os mesmo assuntos listados no primeiro item
+\end{enumerate}
+
+
+\subsection{Critérios de Exclusão}
+
+As seguintes regras serão utilizadas no processo de exclusão de artigos utilizados no trabalho:
+
+\begin{enumerate}[label=CE\arabic*:]
+    \item Artigos em idioma diferentes do inglês e português;
+    \item Artigo duplicado;
+    \item Artigos que não tenham relação com o tema definido nos critérios de Inclusão
+    \item Artigos primários que não possam ajudar a responder às questões de pesquisa definidas
+    \item SLRs e Surveys que não possuam questões de pesquisa, sem processos de busca definido, Sem definição de extração e análise de dados). 
+    \item Quando um mesmo trabalho for apresentado em mais de uma Jornal/Conferência, a versão mais completa será utilizada.
+    \item Quando não for possível obter uma cópia do artigo.
+\end{enumerate}
+
+\subsection{Processo de seleção dos estudos}
+
+O processo de seleção dos estudos primários será dividido em cinco etapas. A seleção será feita por um pesquisador a revisão será realizada por outro. As etapas do processo de seleção dos estudos se dará da seguinte forma:
+
+\begin{enumerate}[label=Etapa\arabic*:]
+    \item Nessa primeira etapa, a string de busca será aplicada na base de pesquisa da iteração e dos resultados retornados serão removidos os trabalhos que estejam em idioma diferentes dos que foram definidos no critério de exclusão CE1 e CE2;
+    \item Na segunda etapa, com base no título, resumo e palavras chaves, remover artigos considerados irrelevantes para a pesquisa, de acordo com os critérios de exclusão CE3;
+    \item Na terceira etapa, agora também com base na introdução e conclusão, remover artigos considerados irrelevantes para a pesquisa (referente aos critérios de aceitação CE3, CE4, CE5) e artigos que não tiver acesso (referente ao critério CE7);
+    \item Na quarta etapa, será realizada a leitura completa dos artigos, seguido da remoção dos  artigos considerados irrelevantes para a pesquisa, seguindo os critérios de aceitação CE3, CE4, CE5 e CE6;
+    \item Na quinta etapa, os estudos rejeitados serão revisados através de um processo de amostragem por outro pesquisador. 
+\end{enumerate}
+
+Será mantida uma lista de estudos candidatos e rejeitados, bem como, qual o motivo da rejeição. 
+
+\subsection{Quality Assessment}
+
+A verificação de qualidade para os SLRs/Surveys e para os estudos primários selecionados respeitando os seguintes critérios: 
+
+\subsubsection{SLR e Surveys}
+
+Pretende utilizar critérios estabelecidos pela Centre for Reviews and Dissemination \cite{crc2023}  da York University \cite{york2023}, que se apoia basicamente em  quatro questões:
+
+\begin{enumerate}
+    \item Os critérios de inclusão e exclusão foram descritos de forma apropriada?? 
+    \item A revisão de literatura aparentemente cobriu todos os estudos relevantes? 
+    \item Os revisores avaliaram a qualidade/validade dos estudos que foram incluídos? 
+    \item Os estudos e dados básicos foram adequadamente descritos?
+\end{enumerate}
+
+As questões serão pontuadas da seguinte forma:
+
+\begin{enumerate}[label=Questão \arabic*:]
+\item S (Sim), os critérios de inclusão são explicitamente definidos no artigo, P (Parcialmente), os critérios de inclusão são implícitos; N (Não), os critérios de inclusão não estão definidos e não podem ser inferidos. 
+\item S, os autores pesquisaram 4 ou mais bibliotecas digitais e incluíram estratégias de pesquisa adicionais ou identificaram e referenciaram todos os periódicos que abordam o tópico de interesse; P, os autores pesquisaram 3 ou 4 bibliotecas digitais sem estratégias de pesquisa extras, ou pesquisaram um conjunto definido, mas restrito de periódicos e anais de conferências; N, os autores pesquisaram até 2 bibliotecas digitais ou um conjunto extremamente restrito de periódicos. 
+\item S, os autores definiram explicitamente critérios de qualidade e os extraíram de cada estudo primário; P, a questão de pesquisa envolve questões de qualidade que são abordadas pelo estudo; N, nenhuma avaliação explícita da qualidade de artigos individuais foi tentada.
+\item S, São apresentadas informações sobre cada artigo; P, apenas informações resumidas são apresentadas sobre artigos individuais; N, os resultados dos estudos individuais não são especificados.
+\end{enumerate}
+
+O Procedimento de pontuação é a seguinte: S=1, P=0.5 e N ou Desconhecido=0. 
+
+O dado será extraído por um pesquisador e uma amostra randômica de 10\% do tamanho dos dados será verificada por outro. 
+
+\subsubsection{Estudos primários}
+
+As questões dos estudos primários serão pontuadas da seguinte forma:
+
+\begin{enumerate}[label=Questão \arabic*:]
+\item S (Sim), O artigo consegue responder a todas as perguntas de pesquisa? P (Parcialmente), o artigo consegue responder ao menos duas das perguntas de pesquisa; N (Não), o artigo consegue responder uma pergunta de pesquisa. 
+\item S, O experimento do artigo consegue ser reproduzido de maneira fácil e clara; P, o experimento do artigo está disponível, mas não foi possível reproduzir; N, não foi possível encontrar ou reproduzir o experimento do artigo.
+\end{enumerate}
+
+O Procedimento de pontuação é a seguinte: S=1, P=0.5 e N ou Desconhecido=0.
+
+O dado será extraído por um pesquisador e uma amostra randômica de 10\% do tamanho dos dados será verificada por outro. 
+
+\subsection{Coleta dos dados}
+
+Os dados coletados em cada artigo serão:
+
+\begin{enumerate}
+    \item Origem (i.e. Conferência ou Jornal). 
+    \item O ano que foi publicado. Nota: Se o artigo foi publicado em diversas origens, ambas as datas serão registradas, e a primeira data será utilizado na análise. 
+    \item Classificação do artigo 
+    \begin{enumerate}
+        \item Tipo (Systematic Literature Review SLR, Survey, Estudo Primário). 
+    \end{enumerate}
+    \item Área principal do tópico. 
+    \item Autor(es) e afiliação (organização e país) 
+    \item Qual a base de pesquisa que o trabalho foi encontrado
+    \item O artigo fala sobre problemas de concorrência encontrados por programas que utilizam troca de mensagens? Quais foram eles?
+    \item Entre os problemas listados no trabalho, existem problemas tipicamente na programação concorrente baseado em memória compartilhada? Quais foram eles?
+    \item O artigo fala sobre validação de programas concorrentes que utilizam troca de mensagens? Quais foram as técnicas utilizadas?
+    \item O artigo fala sobre verificação de programas concorrentes que utilizam troca de mensagens? Quais foram as técnicas utilizadas?
+    \item O artigo propõe ou utiliza alguma ferramenta? Quais? Estão acessíveis?    
+    \item Quais os Gaps existentes no estudo.
+    \item Resumo do artigo. 
+    \item Pontuação do estudo. 
+\end{enumerate}
+
+Os dados serão extraídos por um pesquisador e uma amostra randômica de 10\% do tamanho dos dados será verificada por outro. 
+
+\subsection{Análise dos dados}
+
+Os dados serão tabulados (ordenados alfabeticamente pelo primeiro nome do autor) para mostrar a informação básica de cada estudo. O número de estudos em cada categoria principal será contada.
+
+As tabelas serão revisadas para responder às questões de pesquisa e identificar quaisquer tendências ou limitações interessantes na pesquisa atual relacionada, como segue:
+
+\begin{enumerate}[label=Pergunta \arabic*:]
+    \item Quais os principais problemas encontrados em programas concorrentes baseados em troca de mensagens? Isso será abordado identificando e totalizando as respostas dos formulários de extração de dados.
+    \item Quais as técnicas de pesquisa que estão sendo abordadas nas pesquisas?  Isso será abordado identificando e totalizando as respostas dos formulários de extração de dados.
+    \item Como os programas concorrentes são verificados e validados?  Isso será abordado identificando e totalizando as respostas dos formulários de extração de dados.
+    \item Quais os problemas que ocorrem em programas concorrentes que se baseiam em memória compartilhada e que também ocorrem com os programas que se baseiam em troca de mensagem?  Isso será abordado identificando e totalizando as respostas dos formulários de extração de dados.
+    \item Quais são as limitações da pesquisa atual? Analisaremos a variedade de tópicos, o escopo e a qualidade para determinar se existem limitações observáveis.
+\end{enumerate}
+
+Além da análise também serão tabulados os seguinte resultados:
+
+\begin{enumerate}
+    \item Número de artigos selecionados por ano e por origem 
+    \item Distribuição dos artigos selecionados por base de pesquisa
+\end{enumerate}
+
+
+\subsection{Disseminação}
+
+Os resultados do estudo devem ser de interesse das comunidades que possuem como áreas de interesse os seguinte assuntos: de programação concorrente; sistemas distribuídos; troca de mensagem; validação e verificação de software e possivelmente testes automatizados. 
+
+Por esse motivo, planejamos relatar os resultados no seguinte repositório do github \cite{repositorioGithub}. 
+
+Também será documentado o resultado completo do estudo na dissertação de mestrado do Programa de Pós Graduação em Informática da Universidade Federal do Rio de Janeiro. 
+
+Uma versão curta do trabalho será submetida para alguma conferência ou jornal relevante para a área de estudo do trabalho. Os principais congressos e jornals selecionados como candidatos para a publicação desse trabalho são:
+
+
+\begin{center}
+\begin{tabular}{|p{8cm}|p{2cm}|p{3cm}|p{2cm}|}
+\hline
+\textbf{Nome} & \textbf{Dt último evento} & \textbf{Dt limite submissão} & \textbf{Tipo publicação} \\
+\hline 
+International Workshop on Software Correctness for HPC Applications & Nov/22 & Ago/22 & Conferência \\ 
+\hline 
+International Conference on Automated Software Engineering & Set/22 & Abr/22 & Conferência \\ 
+\hline 
+IEEE Access & N/A & Qualquer data & Jornal \\ 
+\hline 
+IEEE TRANSACTIONS ON PARALLEL AND DISTRIBUTED SYSTEMS & N/A & Qualquer data & Jornal \\ 
+\hline 
+IEEE TRANSACTIONS ON SOFTWARE ENGINEERING & N/A & Qualquer data & Jornal \\ 
+\hline 
+ACM COMPUTING SURVEYS & N/A & Qualquer data & Jornal \\ 
+\hline 
+ACM TRANSACTIONS ON PROGRAMMING LANGUAGES AND SYSTEMS & N/A & Qualquer data & Jornal \\ 
+\hline 
+CONCURRENCY AND COMPUTATION: PRACTICE \& EXPERIENCE & N/A & Qualquer data & Jornal \\ 
+\hline 
+JOURNAL OF PARALLEL AND DISTRIBUTED COMPUTING & N/A & Qualquer data & Jornal \\ 
+\hline 
+THE JOURNAL OF SYSTEMS AND SOFTWARE & N/A & Qualquer data & Jornal \\ 
+\hline
+\end{tabular}
+\end{center}
