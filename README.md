@@ -1,7 +1,4 @@
-# TTVVPCBTM
-Técnicas de Testes Validação e Verificação de Programas Concorrentes Baseados em Troca de Mensagens
-
-# Message Passing Concurrent Correctness [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7317397.svg)](https://doi.org/10.5281/zenodo.7317397)
+# Técnicas de Testes Validação e Verificação de Programas Concorrentes Baseados em Troca de Mensagens [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7317397.svg)](https://doi.org/10.5281/zenodo.7317397)
 
 Repository used to store all artifacts related to the final work of my master's degree at PPGI / UFRJ
 
